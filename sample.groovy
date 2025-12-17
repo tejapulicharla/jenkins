@@ -1,22 +1,17 @@
-pipeline{
-    agent{
-        stages{
-            stage("test"){
-                steps {
-                    echo " To Test the envirnoment"
-                }
-            }
-            stage("build"){
-                steps {
-                    echo " To buidl the envirnoment"
-                }
-            }
-            stage("deploy"){
-                steps {
-                    echo " To deploy the envirnoment"
-                }
-            }
+pipeline {
+    agent any
 
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/tejapulicharla/jenkins.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Hello Jenkins! Build is running...'
+            }
         }
     }
 }
