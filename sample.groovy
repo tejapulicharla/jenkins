@@ -13,9 +13,9 @@ pipeline {
                 echo 'Hello Jenkins! Build is running...'
             }
         }
-    }
-    
+    }    
 }
+
 
 
 
